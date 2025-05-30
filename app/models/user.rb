@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :posts
-  has_many :feedbacks
+  has_many :feedbacks, dependent: :destroy
 
   def full_name
     "#{first_name} #{last_name}"
