@@ -1,0 +1,6 @@
+<%= form_with(model: [post, post.feedbacks.build]) do | f|  %>
+  <div>
+    <%= f.text_field :content %>
+    <%= f.submit "Add Feedback" %>
+  </div>
+<% end %>

@@ -8,3 +8,15 @@
 
   <%= button_to "Destroy this post", @post, method: :delete %>
 </div>
+
+<div>
+  <% @post.feedbacks.each do |feedback|%>
+    <p>
+      <%= render feedback, post: @post %>
+    </p>
+  <% end %>
+</div>
+
+<div>
+  <%= render 'feedbacks/form', post: @post %>
+</div>
