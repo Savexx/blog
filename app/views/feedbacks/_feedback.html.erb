@@ -1,0 +1,11 @@
+<div>
+  <p><%= feedback.user.full_name %></p>
+  <p>Posted: <%= time_ago_in_words(feedback.created_at) %>
+  </p>
+
+  <% if current_user == feedback.user %>
+    <%= button_to "Delete", [post, feedback], method: :delete %>
+  <% end %>
+  <hr>
+  <%= feedback.content %>
+</div>
