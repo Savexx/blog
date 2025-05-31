@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+    <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
+      <a class="navbar-brand" href="#">A Blog App</a>
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to "Home", root_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">My Posts</a>
+        </li>
+        <div class="dropdown">
+          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <%= current_user.first_name %>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><%= link_to "My Profile", edit_user_registration_path(current_user), class: 'dropdown-item' %></li>
+            <li><%= button_to "Sign out", destroy_user_session_path, class: 'dropdown-item', method: :delete %></li>
+          </ul>
+        </div>
+      </ul>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>

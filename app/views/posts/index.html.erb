@@ -1,14 +1,12 @@
-<p style="color: green"><%= notice %></p>
+<div class="container justify-content-center">
+  <div class="row g-4 row-cols-12" id="posts">
+    <% @posts.each do |post| %>
+      <%= render post %>
+      <p>
+        <%= link_to "Show this post", post %>
+      </p>
+    <% end %>
 
-<h1>Posts</h1>
-
-<div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
-  <% end %>
+    <%= link_to "New post", new_post_path %>
+  </div>
 </div>
-
-<%= link_to "New post", new_post_path %>
