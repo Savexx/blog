@@ -11,7 +11,7 @@ class FeedbackMailer < ApplicationMailer
 
     mail(
       to: @post_author.email,
-      subject: 'New feedback to your post'
+      subject: 'You got a new feedback!'
     )
   end
 end
