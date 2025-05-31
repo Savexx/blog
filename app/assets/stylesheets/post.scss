@@ -1,0 +1,14 @@
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.post-header {
+  font-size: $h5-font-size;
+  font-weight: 600;
+}
+
+.post-content {
+  font-size: $font-size-base;
+}
