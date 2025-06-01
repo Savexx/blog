@@ -11,7 +11,7 @@ RSpec.describe Post, type: :model do
     expect(post).to be_valid
   end
 
-  it 'is has a body' do
+  it 'is has a content' do
     post = Post.new(title: 'Hello Test', content: 'Testing', user:)
     expect(post).to be_valid
   end
