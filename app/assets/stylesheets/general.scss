@@ -90,3 +90,21 @@ p {
   aspect-ratio: 1;
   max-width: 350px;
 }
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.logo-img {
+  height: 40px;
+  width: 40px;
+}
+
+.logo-title {
+  color: #5b55ae;
+  font-size: 24px;
+  font-weight: bold;
+}
