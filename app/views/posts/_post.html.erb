@@ -3,16 +3,19 @@
     <div class="block-head">
       <div class="d-flex justify-content-between">
         <div class="d-flex" >
-          <span>
-            <%= render "shared/user_avatar", user: post.user %> <%= post.user.full_name %>
+          <%= render "shared/user_avatar", user: post.user %>
+          <span class="ms-2">
+            <%= post.user.full_name %>
           </span>
-          <i class="bi bi-dot"></i>
-          <span class="text-muted text-small">
-            <%= post.user.email %>
+          <span class="d-none d-md-inline">
+            <i class="bi bi-dot"></i>
+            <span class="text-muted text-small">
+              <%= post.user.email %>
+            </span>
           </span>
         </div>
         <div class="d-flex">
-          <span title="<%= date_formatter(post.created_at) %>" class="text-muted text-small me-2">Posted <%= time_ago_in_words(post.created_at) %> ago.</span>
+          <span title="<%= date_formatter(post.created_at) %>" class="text-muted text-small me-2 text-end">Posted <%= time_ago_in_words(post.created_at) %> ago.</span>
           <% if current_user == post.user %>
             <i class="bi bi-three-dots" style="cursor: pointer" data-bs-toggle="dropdown"></i>
             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">

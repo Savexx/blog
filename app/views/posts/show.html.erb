@@ -5,8 +5,8 @@
     <%= render 'feedbacks/form', post: @post %>
   <% end %>
 </div>
-
-<div class="p-2 p-md-4">
+<hr>
+<div class="p-2 px-md-4">
   <% if @feedbacks.count > 0 %>
     <% @feedbacks.each do | feedback |%>
       <p>
