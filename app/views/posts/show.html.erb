@@ -1,9 +1,4 @@
-<div class="block d-inline-block p-1 mb-2">
-  <%= link_to root_path, class: 'text-muted text-small' do  %>
-    <i class="bi bi-arrow-left me-2"></i>
-    Go Back
-  <% end %>
-</div>
+<%= render "shared/go_back" %>
 <%= render @post %>
 <div>
   <% unless @post.user == current_user %>
