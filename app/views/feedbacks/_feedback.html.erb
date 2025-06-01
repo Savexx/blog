@@ -1,11 +1,18 @@
-<div>
-  <p><%= feedback.user.first_name %></p>
+<div class="block">
+  <div class="block-head">
+    <%= render "shared/user_avatar", user: feedback.user %> <%= feedback.user.full_name %>
+    <i class="bi bi-dot"></i>
+    <span class="text-muted text-small">
+      <%= post.user.email %>
+    </span>
+  </div>
+  <div class="block-body"> <% if current_user == feedback.user %>
+      <%= button_to "Delete", [post, feedback], method: :delete, data: { turbo_confirm: "Are you sure you want to delete this feedback?" } %>
+    <% end %>
+    <%= feedback.content %></div>
+
   <p>Posted: <%= time_ago_in_words(feedback.created_at) %>
   </p>
 
-  <% if current_user == feedback.user %>
-    <%= button_to "Delete", [post, feedback], method: :delete, data: { turbo_confirm: "Are you sure you want to delete this feedback?" } %>
-  <% end %>
-  <%= feedback.content %>
   <hr>
 </div>
