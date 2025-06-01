@@ -1,3 +1,5 @@
+@import 'bootstrap';
+
 body {
   padding: 0;
   margin: 0;
@@ -10,7 +12,7 @@ body {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .block {
@@ -46,4 +48,13 @@ a {
 
 p {
   margin: 0;
+}
+
+.bg-custom-primary {
+  background-color: #5b55ae !important;
+  color: #fff !important;
+
+  &:hover {
+    background-color: rgba(91, 85, 174, 0.8) !important;
+  }
 }
