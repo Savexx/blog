@@ -23,7 +23,7 @@
           </button>
           <ul class="dropdown-menu dropdown-menu-end">
             <li><%= link_to "My Profile", edit_user_registration_path(current_user), class: 'dropdown-item' %></li>
-            <li><%= button_to "Sign out", destroy_user_session_path, class: 'dropdown-item', method: :delete, data: { turbo_confirm: "Are you sure you want to delete this post?" } %></li>
+            <li><%= button_to "Sign out", destroy_user_session_path, class: 'dropdown-item', method: :delete %></li>
           </ul>
         </div>
       </ul>
