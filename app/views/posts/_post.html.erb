@@ -11,7 +11,20 @@
             <%= post.user.email %>
           </span>
         </div>
-        <span title="<%= date_formatter(post.created_at) %>" class="text-muted text-small">Posted <%= time_ago_in_words(post.created_at) %> ago.</span>
+        <div class="d-flex">
+          <span title="<%= date_formatter(post.created_at) %>" class="text-muted text-small me-2">Posted <%= time_ago_in_words(post.created_at) %> ago.</span>
+
+          <i class="bi bi-three-dots" style="cursor: pointer" data-bs-toggle="dropdown"></i>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+            <li class="dropdown-header text-start">
+              <h6>Options</h6>
+            </li>
+
+            <%= link_to "Edit", edit_post_path(post), class: 'dropdown-item'  %>
+            <%= button_to "Delete", post, class: 'dropdown-item',  method: :delete %>
+
+          </ul>
+        </div>
       </div>
     </div>
     <%= link_to post do | d | %>
