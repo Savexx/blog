@@ -1,8 +1,19 @@
 <div class="posts-container" id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <% unless post == @posts.last %>
-      <hr>
+  <% if @posts.count > 0 %>
+    <% @posts.each do |post| %>
+      <%= render post %>
+      <% unless post == @posts.last %>
+        <hr>
+      <% end %>
     <% end %>
+  <% else %>
+    <div class="empty-container">
+      <img src="https://lh3.googleusercontent.com/d/1imB8YUnpmC9lSjrVMEj2VShjQIt8-44m" class="empty-img" alt="No Posts yet" />
+      <h6>No Posts created yet</h6>
+      <p class="text-muted">Be the first one to create a post.</p>
+      <%= link_to new_post_path, class: 'btn bg-custom-primary' do %>
+        <i class="bi bi-chat-square-dots-fill text-light me-2"></i> Create Post
+      <% end %>
+    </div>
   <% end %>
 </div>
