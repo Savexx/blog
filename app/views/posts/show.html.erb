@@ -1,12 +1,26 @@
+<div class="block d-inline-block p-1 mb-2">
+  <%= link_to root_path, class: 'text-muted text-small' do  %>
+    <i class="bi bi-arrow-left me-2"></i>
+    Go Back
+  <% end %>
+</div>
 <%= render @post %>
 <div>
-  <%= render 'feedbacks/form', post: @post %>
+  <% unless @post.user == current_user %>
+    <%= render 'feedbacks/form', post: @post %>
+  <% end %>
 </div>
 
-<div>
-  <% @feedbacks.each do | feedback |%>
-    <p>
-      <%= render feedback, post: @post %>
-    </p>
+<div class="p-2 p-md-4">
+  <% if @feedbacks.count > 0 %>
+    <% @feedbacks.each do | feedback |%>
+      <p>
+        <%= render feedback, post: @post %>
+      </p>
+    <% end %>
+  <% else %>
+    <div class="d-flex justify-content-center align-items-center text-muted fw-bold" style="min-height: 30vh">
+      No feedbacks yet
+    </div>
   <% end %>
 </div>
