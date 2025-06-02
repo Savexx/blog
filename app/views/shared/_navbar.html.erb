@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+
+    <div class="logo-container">
+      <img src="https://lh3.googleusercontent.com/d/1FXiotvsl9jqnWOO4h0q_Y1Bl3A5Q9Cbf" class="logo-img" alt="">
+      <h6 class="logo-title d-none d-sm-inline">Blog App</h6>
+    </div>
+    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <%= link_to root_path, class: 'nav-link' do  %>
+          <i class="bi bi-house-fill" style="color: #5b55ae" title="Home"></i>
+        <% end %>
+      </li>
+
+      <li class="nav-item">
+        <%= link_to new_post_path, class: 'nav-link text-custom-primary text-small d-flex align-items-center' do  %>
+          <i class="bi bi-plus-lg" style="color: #5b55ae" title="Create new Post" ></i>
+          <span class="text-small ms-1">
+            Create
+          </span>
+        <% end %>
+      </li>
+      <div class="dropdown d-flex">
+        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <%= render "shared/user_avatar", user: current_user %>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><%= link_to "My Profile", edit_user_registration_path(current_user), class: 'dropdown-item' %></li>
+          <li><%= button_to "Sign out", destroy_user_session_path, class: 'dropdown-item', method: :delete %></li>
+        </ul>
+      </div>
+    </ul>
+
+  </div>
+</nav>

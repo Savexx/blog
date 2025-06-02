@@ -1,0 +1,9 @@
+.navbar {
+  box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+  background-color: #ffffff;
+}
+
+.navbar-nav {
+  flex-direction: row !important;
+  gap: 8px;
+}
