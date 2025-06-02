@@ -56,7 +56,11 @@ rails db:seed
 
 ### 7. Creating a feedback
 
-> Sign-in with the dummy account: email: user@test.com password: password
+```bash
+Sign-in with the dummy account:
+email: user@test.com
+password: password
+```
 
 ### 8. Email Notifcation
 
