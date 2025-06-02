@@ -4,7 +4,7 @@ A Ruby on Rails application for managing and publishing blog posts.
 
 ---
 
-## Table of Contents
+## 📚 Table of Contents
 
 - [Versions](#versions)
 - [Getting Started](#getting-started)
@@ -53,7 +53,7 @@ rails db:seed
 
 > Add ENV file The env file is sent through email.
 
-## Usage
+## 💻 Usage
 
 ### 1. To run development server, run:
 
@@ -81,10 +81,10 @@ password: password
 
 > You will receive an email notification to your email address.
 
-## Testing
+## 🧪 Testing
 
 To run tests:
 
 ```bash
-bundle exec sidekiq
+bundle exec rspec
 ```
