@@ -73,3 +73,7 @@ gem 'dotenv-rails'
 gem 'bootstrap', '~> 5.3', '>= 5.3.5'
 
 gem 'sassc-rails'
+
+group :development, :test do
+  gem 'rspec-rails'
+end
