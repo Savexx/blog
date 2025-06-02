@@ -42,22 +42,22 @@ rails db:migrate
 rails db:seed
 ```
 
-### 4.
+### 4. Add the ENV File
 
-Add ENV file The env file is sent through email.
+> Add ENV file The env file is sent through email.
 
 ### 5. Sign up
 
-Use an email address that you can receive emails.
+> Use an email address that you can receive emails.
 
 ### 6. Creating a post
 
-Sign-in to your acccount. Create your first post.
+> Sign-in to your acccount. Create your first post.
 
 ### 7. Creating a feedback
 
-Sign-in with the dummy account: email: user@test.com password: password
+> Sign-in with the dummy account: email: user@test.com password: password
 
 ### 8. Email Notifcation
 
-You will receive an email notification to your email address.
+> You will receive an email notification to your email address.
