@@ -1,8 +1,15 @@
-# Blog
+# Blog App
 
 A Ruby on Rails application for managing and publishing blog posts.
 
 ---
+
+## Table of Contents
+
+- [Versions](#versions)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Testing](#testing)
 
 ## ⚙️ Versions
 
@@ -46,15 +53,23 @@ rails db:seed
 
 > Add ENV file The env file is sent through email.
 
-### 5. Sign up
+## Usage
+
+### 1. To run development server, run:
+
+```bash
+rails s
+```
+
+### 2. Sign up
 
 > Use an email address that you can receive emails.
 
-### 6. Creating a post
+### 3. Creating a post
 
 > Sign-in to your acccount. Create your first post.
 
-### 7. Creating a feedback
+### 4. Creating a feedback
 
 ```bash
 Sign-in with the dummy account:
@@ -62,6 +77,14 @@ email: user@test.com
 password: password
 ```
 
-### 8. Email Notifcation
+### 4. Email Notifcation
 
 > You will receive an email notification to your email address.
+
+## Testing
+
+To run tests:
+
+```bash
+bundle exec sidekiq
+```
